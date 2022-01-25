@@ -1,0 +1,8 @@
+﻿CREATE TABLE [Persons].[Customers]
+(
+	[CustomerId] INT NOT NULL IDENTITY(1,1),
+	[FirstName] NVARCHAR(50) NOT NULL,
+	[LastName] NVARCHAR(50) NOT NULL,
+	[Email] NVARCHAR(50) NOT NULL,
+	CONSTRAINT PK_CustomerId PRIMARY KEY CLUSTERED (CustomerId)
+)

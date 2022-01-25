@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:WebApi.Controllers.V1.CustomerController">
+            <summary>
+            Customers endpoint
+            </summary>
+        </member>
+        <member name="M:WebApi.Controllers.V1.CustomerController.GetCustomers(System.Int32,System.Int32)">
+            <summary>
+            Returns list of customers in database
+            </summary>
+            <param name="pageNumber">Page number</param>
+            <param name="pageSize">Page size</param>
+            <returns>List of customers</returns>
+        </member>
+        <member name="M:WebApi.Controllers.V1.CustomerController.GetCustomer(System.Int32)">
+            <summary>
+            Get customer by id
+            </summary>
+            <param name="customerId">Customer id</param>
+            <returns>Customer details</returns>
+        </member>
+        <member name="M:WebApi.Controllers.V1.CustomerController.RegisterCustomer(Application.Features.CustomerFeatures.Commands.RegisterCustomer.RegisterCustomerRequest)">
+            <summary>
+            Registers customer with provided data
+            </summary>
+            <param name="request">Customer data to register</param>
+            <returns>Newly created customer with id</returns>
+        </member>
+    </members>
+</doc>
