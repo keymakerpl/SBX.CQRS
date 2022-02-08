@@ -16,7 +16,7 @@ namespace Domain.Errors
         {
             public static Error CustomerRegistrationError(IEnumerable<string> errors) =>
                 new Error("customer.validation.error",
-                    $"Cannot register customer due to an validation errors: {errors.Aggregate((e1, e2) => $"{e1}, {e2}")}");
+                    $"Cannot register customer due to an validation errors. {errors.Aggregate((e1, e2) => $"{e1} {e2}")}");
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using Application.Features.CustomerFeatures.Commands.RegisterCustomer;
 using FluentValidation;
 
-namespace WebApi.Validation
+namespace WebApi.Customers.Validation
 {
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
     public class RegisterCustomerRequestValidator : AbstractValidator<RegisterCustomerRequest>

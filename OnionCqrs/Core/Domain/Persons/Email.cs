@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Domain.Persons
 {
-    public class Email : ValueObject
+    public sealed class Email : ValueObject
     {
         private readonly string value;
 

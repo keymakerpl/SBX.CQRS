@@ -1,10 +1,6 @@
 ﻿using CSharpFunctionalExtensions;
 using Domain.Persons.Customers;
 using Infrastructure.Persistence.Context;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Infrastructure.Persistence.Domain.Customers

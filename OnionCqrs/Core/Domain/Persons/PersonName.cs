@@ -2,20 +2,20 @@
 using Domain.Common;
 using System.Collections.Generic;
 
-namespace Domain.Persons.Customers
+namespace Domain.Persons
 {
-    public class CustomerName : ValueObject
+    public sealed class PersonName : ValueObject
     {
         private readonly string value;
 
-        private CustomerName(string customerName) => this.value = customerName;
+        private PersonName(string customerName) => this.value = customerName;
 
-        public static Result<CustomerName> Create(string customerName) => 
+        public static Result<PersonName> Create(string customerName) => 
             Result.SuccessIf(string.IsNullOrWhiteSpace(customerName) is false, customerName, "Empty customer name!")
                   .Ensure(name => name.Length <= 50, "Customer name exceed 50 characters!")
-                  .Map(name => new CustomerName(name));
+                  .Map(name => new PersonName(name));
 
-        public static implicit operator string(CustomerName customertName) => customertName.value;
+        public static implicit operator string(PersonName customertName) => customertName.value;
 
         protected override IEnumerable<object> GetEqualityComponents()
         {

@@ -9,12 +9,11 @@ using WebApi.Controllers.Base;
 using CSharpFunctionalExtensions;
 using Domain.Errors;
 using Application.Features.CustomerFeatures.Commands.RegisterCustomer;
-using WebApi.Validation;
+using WebApi.Customers.Validation;
 using Application.Features.CustomerFeatures.Commands;
-using System;
 using Application.Features.CustomerFeatures;
 
-namespace WebApi.Controllers.V1
+namespace WebApi.Customers.Controllers.V1
 {
     /// <summary>
     /// Customers endpoint

@@ -17,8 +17,8 @@ namespace Application.Features.CustomerFeatures.Commands
         public async Task<Result<CustomerDto>> Handle(RegisterCustomerCommand request,
                                                 CancellationToken cancellationToken)
         {
-            var firstName = CustomerName.Create(request.FirstName);
-            var lastName = CustomerName.Create(request.LastName);
+            var firstName = PersonName.Create(request.FirstName);
+            var lastName = PersonName.Create(request.LastName);
             var email = Email.Create(request.Email);
 
             return await Result.Combine(firstName, lastName, email)
