@@ -1,5 +1,5 @@
-﻿using Domain.Persons;
-using Domain.Persons.Customers;
+﻿using Domain.Utils;
+using Domain.Utils.Customers;
 using Infrastructure.Persistence.Constants;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;

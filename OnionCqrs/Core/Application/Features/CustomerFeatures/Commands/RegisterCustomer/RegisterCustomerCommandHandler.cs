@@ -1,6 +1,6 @@
 ﻿using CSharpFunctionalExtensions;
-using Domain.Persons;
-using Domain.Persons.Customers;
+using Domain.Utils;
+using Domain.Utils.Customers;
 using MediatR;
 using System.Threading;
 using System.Threading.Tasks;

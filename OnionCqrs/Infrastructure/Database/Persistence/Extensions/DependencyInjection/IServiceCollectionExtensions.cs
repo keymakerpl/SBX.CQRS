@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Infrastructure.Persistence.Context;
-using Domain.Persons.Customers;
+using Domain.Utils.Customers;
 using Infrastructure.Persistence.Domain.Customers;
 
 namespace Infrastructure.Persistence.Extensions.DependencyInjection

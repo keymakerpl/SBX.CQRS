@@ -2,7 +2,7 @@
 
 namespace Domain.Common
 {
-    public interface IRepository<TEntity>
+    public interface IGenericRepository<TEntity>
         where TEntity : AggregateRoot
     {
         public Maybe<TEntity> GetById(object id);

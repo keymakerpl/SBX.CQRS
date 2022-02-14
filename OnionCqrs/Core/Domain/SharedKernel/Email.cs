@@ -3,7 +3,7 @@ using Domain.Common;
 using Domain.Extensions;
 using System.Collections.Generic;
 
-namespace Domain.Persons
+namespace Domain.Utils
 {
     public sealed class Email : ValueObject
     {

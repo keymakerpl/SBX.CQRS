@@ -1,11 +1,10 @@
 ﻿using CSharpFunctionalExtensions;
-using Domain.Persons;
-using Domain.Persons.Employees.Developers;
+using Domain.Utils;
 using Domain.Projects;
+using static Domain.Projects.WorkTime;
 using FluentAssertions;
 using System;
 using Xunit;
-using static Domain.Persons.Employees.Developers.WorkTime;
 
 namespace Domain.Tests
 {
@@ -96,9 +95,9 @@ namespace Domain.Tests
             var project = new Project(deadline, 2, 5000);
             project.AssignDeveloper(developers[0]);
 
-            project.CalculateEstimatedDateOfComplete(new DateOnly(2022, 2, 8))
+            project.CalculateEstimatedDateOfComplete(new DateOnly(2022, 2, 11))
                    .Should()
-                   .Be(new DateOnly(2022, 2, 9));
+                   .Be(new DateOnly(2022, 2, 14));
         }
 
         [Fact]

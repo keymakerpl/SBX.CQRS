@@ -1,6 +1,7 @@
 ﻿using Domain.Common;
+using Domain.Utils;
 
-namespace Domain.Persons.Employees.Developers
+namespace Domain.Projects
 {
     public class Developer : Entity<int>
     {

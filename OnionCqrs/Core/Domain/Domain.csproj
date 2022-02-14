@@ -8,8 +8,4 @@
     <ProjectReference Include="..\..\Infrastructure\Shared\FunctionalCSharp\CSharpFunctionalExtensions\CSharpFunctionalExtensions.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="SharedKernel\" />
-  </ItemGroup>
-
 </Project>

@@ -2,7 +2,7 @@
 using Domain.Common;
 using System.Collections.Generic;
 
-namespace Domain.Persons
+namespace Domain.Utils
 {
     public sealed class PersonName : ValueObject
     {

@@ -1,5 +1,5 @@
 ﻿using CSharpFunctionalExtensions;
-using Domain.Persons.Customers;
+using Domain.Utils.Customers;
 using Infrastructure.Persistence.Context;
 using System.Threading.Tasks;
 

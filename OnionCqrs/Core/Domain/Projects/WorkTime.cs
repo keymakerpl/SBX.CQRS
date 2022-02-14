@@ -1,7 +1,7 @@
 ﻿using Domain.Common;
 using System.Collections.Generic;
 
-namespace Domain.Persons.Employees.Developers
+namespace Domain.Projects
 {
     public sealed class WorkTime : ValueObject
     {

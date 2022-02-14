@@ -1,6 +1,6 @@
 ﻿using Application.Interfaces;
-using Domain.Persons;
-using Domain.Persons.Customers;
+using Domain.Utils;
+using Domain.Utils.Customers;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
