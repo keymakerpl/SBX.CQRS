@@ -3,7 +3,7 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 using Xunit;
-using static Domain.Utils.Holidays;
+using static Domain.Utils.NonWorkingDays;
 
 namespace Domain.Tests
 {
@@ -34,37 +34,43 @@ namespace Domain.Tests
         [Fact]
         public void PolandHolidays_should_contains_new_year_day()
         {
-            PolandHolidays(2022).All.Should().Contain(new DateOnly(2022, 01, 01));
+            PolandNonWorkingDays(2022).Holidays.Should().Contain(new DateOnly(2022, 01, 01));
         }
 
         [Fact]
         public void PolandHolidays_should_contains_easter_day()
         {
-            PolandHolidays(2022).All.Should().Contain(new DateOnly(2022, 04, 17));
+            PolandNonWorkingDays(2022).Holidays.Should().Contain(new DateOnly(2022, 04, 17));
         }
 
         [Fact]
         public void PolandHolidays_should_contains_monday_easter_day()
         {
-            PolandHolidays(2022).All.Should().Contain(expected: new DateOnly(2022, 04, 18));
+            PolandNonWorkingDays(2022).Holidays.Should().Contain(expected: new DateOnly(2022, 04, 18));
+        }
+
+        [Fact]
+        public void PolandHolidays_easter_day_for_2021_should_be_expected()
+        {
+            PolandNonWorkingDays(2021).Holidays.Should().Contain(expected: new DateOnly(2021, 04, 04));
         }
 
         [Fact]
         public void PolandHolidays_should_contains_thirteen_days()
         {
-            PolandHolidays(2022).All.Should().HaveCount(13);
+            PolandNonWorkingDays(2022).Holidays.Should().HaveCount(13);
         }
 
         [Fact]
         public void PolandHolidays_should_contains_all_expected_days_for_2022()
         {
-            PolandHolidays(2022).All.ToHashSet().Should().BeEquivalentTo(expectedPolandHolidaysForYear2022);
+            PolandNonWorkingDays(2022).Holidays.ToHashSet().Should().BeEquivalentTo(expectedPolandHolidaysForYear2022);
         }
 
         [Fact]
         public void PolandHolidays_should_contains_only_unique_dates()
         {
-            PolandHolidays(2022).All.Should().OnlyHaveUniqueItems();
+            PolandNonWorkingDays(2022).Holidays.Should().OnlyHaveUniqueItems();
         }
     }
 }

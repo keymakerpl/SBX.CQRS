@@ -2,6 +2,6 @@
 {
     internal sealed class TableNames
     {
-        internal const string CUSTOMERS = "Customers";
+        internal const string DEVELOPERS = "Developers";
     }
 }

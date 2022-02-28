@@ -5,7 +5,7 @@ namespace Domain.Projects
 {
     public class Developer : Entity<int>
     {
-        public WorkTime WorkTime { get; set; }
+        public WorkTime WorkTime { get; }
 
         public Developer(PersonName firstName, PersonName lastName, double codeLinesPerHour, WorkTime workTime)
         {

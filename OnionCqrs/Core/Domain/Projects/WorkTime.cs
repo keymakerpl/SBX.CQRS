@@ -7,6 +7,7 @@ namespace Domain.Projects
     {
         public static readonly WorkTime FullTimeWorker = new(8);
         public static readonly WorkTime PartTimeWorker = new(4);
+        public static readonly WorkTime None = new(0);
 
         private WorkTime(double hoursPerDay) => this.HoursPerDay = hoursPerDay;
 

@@ -19,6 +19,9 @@ namespace Domain.Projects
         public double CalculateEstimatedCodeLinesPerHour() =>
             developers.Sum(developer => developer.CodeLinesPerHour);
 
+        public double CalculateEstimatedCodeLinesPerDay() =>
+            developers.Sum(developer => developer.WorkTime.HoursPerDay * developer.CodeLinesPerHour);
+
         public IEnumerator<Developer> GetEnumerator() => developers.GetEnumerator();
 
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
