@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Domain.SharedKernel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Domain.Utils
+namespace Application.Domain.SharedKernel
 {
     public interface IExpectNonWorkingWeekDays
     {
@@ -20,13 +21,13 @@ namespace Domain.Utils
         IExpectNonWorkingOnDayBuilder OnDayWhen(int month, int day, Func<DateOnly, bool> when);
     }
 
-    public interface IWorkingDaysBuilder
+    public interface INonWorkingDaysBuilder
     {
         INonWorkingDays Build();
     }
 
     public sealed class NonWorkingDaysBuilder :
-        IWorkingDaysBuilder,
+        INonWorkingDaysBuilder,
         IExpectNonWorkingWeekDays,
         IExpectNonWorkingOnDayBuilder
     {

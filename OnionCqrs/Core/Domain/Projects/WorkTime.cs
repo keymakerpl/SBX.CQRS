@@ -9,9 +9,13 @@ namespace Domain.Projects
         public static readonly WorkTime PartTimeWorker = new(4);
         public static readonly WorkTime None = new(0);
 
+        private WorkTime() { }
+
         private WorkTime(double hoursPerDay) => this.HoursPerDay = hoursPerDay;
 
         public double HoursPerDay { get; }
+
+        public static WorkTime FromHours(double workTime) => new WorkTime(workTime);
 
         protected override IEnumerable<object> GetEqualityComponents()
         {

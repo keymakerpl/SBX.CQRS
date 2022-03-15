@@ -21,9 +21,10 @@ namespace Domain.Projects
         public static Status Cancelled => new("Cancelled");
         public static Status Completed => new("Completed");
 
-        private string Value { get; }
+        public string Value { get; }
+        private Status() { }
 
-        private Status(string status) => this.Value = status;
+        private Status(string status) => Value = status;
 
         protected override IEnumerable<object> GetEqualityComponents()
         {

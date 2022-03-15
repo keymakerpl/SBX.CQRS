@@ -1,4 +1,4 @@
-using Domain.Utils;
+using Domain.SharedKernel;
 using FluentAssertions;
 using RandomDataGenerator.FieldOptions;
 using RandomDataGenerator.Randomizers;

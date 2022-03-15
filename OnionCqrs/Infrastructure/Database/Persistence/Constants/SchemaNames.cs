@@ -2,6 +2,6 @@
 {
     internal sealed class SchemaNames
     {
-        internal const string PERSONS = "Persons";
+        internal const string PROJECTS = "Projects";
     }
 }

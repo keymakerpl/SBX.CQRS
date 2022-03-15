@@ -3,7 +3,7 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 using Xunit;
-using static Domain.Utils.NonWorkingDays;
+using static Application.Domain.SharedKernel.NonWorkingDays;
 
 namespace Domain.Tests
 {

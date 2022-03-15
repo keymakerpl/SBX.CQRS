@@ -1,17 +1,12 @@
 ﻿using CSharpFunctionalExtensions;
+using Domain.SharedKernel;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 
-namespace Domain.Utils
+namespace Application.Domain.SharedKernel
 {
-    public interface INonWorkingDays
-    {
-        IReadOnlyCollection<DateOnly> Holidays { get; }
-        IReadOnlyCollection<DayOfWeek> WeekDays { get; }
-    }
-
     public sealed class NonWorkingDays : INonWorkingDays
     {
         public static Func<int, INonWorkingDays> PolandNonWorkingDays => year =>
@@ -67,13 +62,5 @@ namespace Domain.Utils
 
         public override string ToString() =>
             holidays.Select(date => date.ToString()).Aggregate((d1, d2) => $"{d1}, {d2}");
-    }
-
-    public static class NonWorkingDaysExtensions
-    {
-        public static Result ContainsDay(this INonWorkingDays nonWorkingDays, DateOnly date) =>
-            Result.Combine(
-                Result.SuccessIf(nonWorkingDays.WeekDays.Contains(date.DayOfWeek) is false, $"{date} is non working day!"),
-                Result.SuccessIf(nonWorkingDays.Holidays.Contains(date) is false, $"{date} is non working day!"));
     }
 }

@@ -2,11 +2,13 @@
 using Domain.Common;
 using System.Collections.Generic;
 
-namespace Domain.Utils
+namespace Domain.SharedKernel
 {
     public sealed class PersonName : ValueObject
     {
         private readonly string value;
+
+        private PersonName() { }
 
         private PersonName(string customerName) => this.value = customerName;
 

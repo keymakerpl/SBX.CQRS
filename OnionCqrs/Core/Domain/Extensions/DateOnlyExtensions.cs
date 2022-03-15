@@ -1,17 +1,15 @@
-﻿using Domain.Utils;
+﻿using Domain.SharedKernel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Domain.Extensions
 {
     public static class DateOnlyExtensions
     {
         public static DateOnly AddWorkingDays(this DateOnly dateFrom,
-                                              INonWorkingDays nonWorkingDays,
-                                              int days)
+                                              int days,
+                                              INonWorkingDays nonWorkingDays)
         {
             var dateToCheck = new DateOnly(dateFrom.Year, dateFrom.Month, dateFrom.Day);
             var workingDays = new List<DateOnly>();

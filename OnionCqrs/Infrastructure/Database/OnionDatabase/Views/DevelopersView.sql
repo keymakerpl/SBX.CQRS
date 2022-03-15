@@ -1,2 +1,2 @@
-﻿CREATE VIEW [Persons].[DevelopersView]
-	AS SELECT * FROM [Developers]
+﻿CREATE VIEW [Projects].[vDevelopers]
+	AS SELECT * FROM [Projects].[Developers]

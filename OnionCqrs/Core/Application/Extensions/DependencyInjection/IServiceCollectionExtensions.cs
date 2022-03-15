@@ -11,10 +11,10 @@ namespace Application.Extensions.DependencyInjection
         public static IServiceCollection AddApplication(this IServiceCollection services) =>
             services.AddMediatR(Assembly.GetExecutingAssembly())
                     .AddScoped<ISqlQueriesConnectionFactory, SqlQueriesConnectionFactory>()
-                    .AddSingleton(sp => 
+                    .AddSingleton(sp =>
                         new QueriesConnectionString(sp.GetRequiredService<IConfiguration>()
                                                       .GetConnectionString("QueriesConnection")))
-                    .AddSingleton(sp => 
+                    .AddSingleton(sp =>
                         new CommandsConnectionString(sp.GetRequiredService<IConfiguration>()
                                                        .GetConnectionString("CommandsConnection")));
     }

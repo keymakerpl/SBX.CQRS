@@ -63,10 +63,9 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Developers.sql" />
-    <Build Include="Schemas\Persons.sql" />
+    <Build Include="Schemas\Projects.sql" />
+    <Build Include="Tables\Projects.sql" />
+    <Build Include="Views\ProjectsView.sql" />
     <Build Include="Views\DevelopersView.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <RefactorLog Include="OnionDatabase.refactorlog" />
   </ItemGroup>
 </Project>
